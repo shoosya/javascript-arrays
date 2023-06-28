@@ -12,17 +12,48 @@ Note:
 
 */
 
-function getVowels(){
-  const alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
-  let vowels
+function getVowels() {
+  const alphabet = [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g",
+    "h",
+    "i",
+    "j",
+    "k",
+    "l",
+    "m",
+    "n",
+    "o",
+    "p",
+    "q",
+    "r",
+    "s",
+    "t",
+    "u",
+    "v",
+    "w",
+    "x",
+    "y",
+    "z",
+  ];
+  let vowels;
 
-  // Your code here
+  vowels = alphabet.filter(
+    (letter) =>
+      alphabet.indexOf(letter) === 0 ||
+      alphabet.indexOf(letter) === 4 ||
+      alphabet.indexOf(letter) === 8 ||
+      alphabet.indexOf(letter) === alphabet.length - 12 ||
+      alphabet.indexOf(letter) === alphabet.length - 6 ||
+      alphabet.indexOf(letter) === alphabet.length - 2
+  );
 
-  return vowels
+  return vowels;
 }
 
-module.exports = getVowels
-
-/*
-You can run tests for this code to check your answers by running `npm run test-1`
-*/
+module.exports = getVowels;

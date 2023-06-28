@@ -9,16 +9,60 @@ Given an array containing the alphanumeric alphabet, write code that returns an 
 
 */
 
-function getSpanishAlphabet(){
-  const alphaNumericAlphabet = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "&"]
-  let spanishAlphabet
+function getSpanishAlphabet() {
+  const alphaNumericAlphabet = [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g",
+    "h",
+    "i",
+    "j",
+    "k",
+    "l",
+    "m",
+    "n",
+    "o",
+    "p",
+    "q",
+    "r",
+    "s",
+    "t",
+    "u",
+    "v",
+    "w",
+    "x",
+    "y",
+    "z",
+    "&",
+  ];
+  let spanishAlphabet = [];
 
-  // Your code here
+  alphaNumericAlphabet.splice(0, 10);
+  alphaNumericAlphabet.splice(-1, 1);
 
-  return spanishAlphabet
+  spanishAlphabet.push(...alphaNumericAlphabet);
+  spanishAlphabet.splice(spanishAlphabet.indexOf("c") + 1, 0, "ch");
+  spanishAlphabet.splice(spanishAlphabet.indexOf("n") + 1, 0, "ñ");
+  spanishAlphabet.splice(spanishAlphabet.indexOf("l") + 1, 0, "ll");
+
+  return spanishAlphabet;
 }
 
-module.exports = getSpanishAlphabet
+module.exports = getSpanishAlphabet;
 
 /*
 You can run tests for this code to check your answers by running `npm run test-3`
